@@ -79,8 +79,6 @@ function App() {
           <button onClick={handleClickOpenModal} className="flex w-36 h-10 items-center gap-1 bg-[#555A88] p-2 text-[#FFFFFF]"><i className="bx bx-plus text-2xl" ></i>Crear Usuario</button> 
         </nav>
       </header>
-        
-        
             <ModalForm isShowModal={isShowModal} createUser={createUser} isUserToUpdate={isUserToUpdate} updateUser={updateUser} setIsShowModal={setIsShowModal} setIsUserToUpdate={setIsUserToUpdate}/>
             <UsersList users={users} deleteUser={deleteUser} handleClickUpdateUser={handleClickUpdateUser} />
         </section>

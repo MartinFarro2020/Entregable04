@@ -34,16 +34,18 @@ const ModalForm = ({isShowModal, createUser, isUserToUpdate, updateUser, setIsSh
 
     return (
     <section className ={`fixed bg-black/60 top-0 bottom-0 left-0 right-0 flex justify-center items-center transition-[opacity_transform] duration-200 ${isShowModal ? "visible opacity-100 scale-100" : "invisible opacity-0 scale-0"}`}>
-        <form onSubmit={handleSubmit(submit)} className="bg-white gap-4 p-2 h-[300px] rounded-lg relative">
+        <form onSubmit={handleSubmit(submit)} className="bg-white gap-4 p-2 h-[360px] w-[280px]rounded-lg relative">
             <button type="button" onClick={handleClickCloseModal} className="text-[#212121] absolute top-0 right-2">X</button>
             <h2 className=" text-[#0F0F2D] font-roboto text-xl font-bold text-left mb-4">{isUserToUpdate ? "Editar Usuario" : "Nuevo Usuario"}</h2>
-            <div className="flex gap-2 pb-4">
-                <label htmlFor="first_name"><i class='bx bxs-user text-lg'></i></label>
+            <div className="gap-2 pb-4">
+                <label htmlFor="first_name"><i class='bx bxs-user text-lg pr-2'></i></label>
                 <input className ="outline-none border-[1px] border-[#C3C1C1] p-1 rounded-sm" placeholder="Juan José" id="first_name" type="text" {...register("first_name")}></input>
+            </div>
+            <div className="gap-2 pb-4 pl-6">
                 <label htmlFor="last_name"></label>
                 <input className ="outline-none border-[1px] border-[#C3C1C1] p-1 rounded-sm" placeholder="Mosqueira Gomez" id="last_name" type="text" {...register("last_name")}></input>
-           
             </div>
+
             <div className="pb-4">
                 <label htmlFor="email"><i class='bx bxs-envelope text-lg mr-2' ></i></label>
                 <input className ="outline-none border-[1px] border-[#C3C1C1] p-1 rounded-sm" placeholder="ejemplo@correo.com"id="email" type="text" {...register("email")}></input>
