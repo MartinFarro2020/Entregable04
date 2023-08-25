@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import {useForm} from "react-hook-form"
+import { useForm } from "react-hook-form"
 import { EMPTY_FORM_VALUES } from "../shared/constants"
 
 const ModalForm = ({isShowModal, createUser, isUserToUpdate, updateUser, setIsShowModal, setIsUserToUpdate}) => {
@@ -38,7 +38,7 @@ const ModalForm = ({isShowModal, createUser, isUserToUpdate, updateUser, setIsSh
             <button type="button" onClick={handleClickCloseModal} className="text-[#212121] absolute top-0 right-2">X</button>
             <h2 className=" text-[#0F0F2D] font-roboto text-xl font-bold text-left mb-4">{isUserToUpdate ? "Editar Usuario" : "Nuevo Usuario"}</h2>
             <div className="gap-2 pb-4">
-                <label htmlFor="first_name"><i class='bx bxs-user text-lg pr-2'></i></label>
+                <label htmlFor="first_name"><i className="bx bxs-user text-lg pr-2"></i></label>
                 <input className ="outline-none border-[1px] border-[#C3C1C1] p-1 rounded-sm" placeholder="Juan José" id="first_name" type="text" {...register("first_name")}></input>
             </div>
             <div className="gap-2 pb-4 pl-6">
@@ -47,15 +47,15 @@ const ModalForm = ({isShowModal, createUser, isUserToUpdate, updateUser, setIsSh
             </div>
 
             <div className="pb-4">
-                <label htmlFor="email"><i class='bx bxs-envelope text-lg mr-2' ></i></label>
+                <label htmlFor="email"><i className="bx bxs-envelope text-lg mr-2" ></i></label>
                 <input className ="outline-none border-[1px] border-[#C3C1C1] p-1 rounded-sm" placeholder="ejemplo@correo.com"id="email" type="text" {...register("email")}></input>
             </div>
             <div className="mb-4">
-                <label htmlFor="password"><i class='bx bxs-lock-alt text-lg mr-2'></i></label>
-                <input className ="outline-none border-[1px] border-[#C3C1C1] p-1 rounded-sm" placeholder="********" id="password" type="text" {...register("password")}></input>
+                <label htmlFor="password"><i className="bx bxs-lock-alt text-lg mr-2"></i></label>
+                <input className ="outline-none border-[1px] border-[#C3C1C1] p-1 rounded-sm" placeholder="********" id="password" {...register("password")} type="password"></input>
             </div>
-            <div className="mb-4">
-                <label htmlFor="birthday"><i class='bx bxs-cake text-lg mr-2'></i></label>
+            <div className="mb-4"> 
+                <label htmlFor="birthday"><i className="bx bxs-cake text-lg mr-2"></i></label>
                 <input className ="outline-none border-[1px] border-[#C3C1C1] p-1 rounded-sm" id="birthday" type="date" {...register("birthday")}></input>
             </div> 
             
