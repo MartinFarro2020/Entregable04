@@ -3,7 +3,7 @@ import Images from "./Images"
 const UsersCard = ({user, deleteUser, handleClickUpdateUser}) => {
 
   return (
-    <article className="grid border-2 rounded-md mt-14 w-[300px]">
+    <article className="grid border-2 rounded-md mt-14 w-[300px]relative">
       <ul className="m-4">
         <li className="absolute  ml-40 mt-[100px] w-[100px] h-[100px] rounded-full"><Images /></li>
         <li className="text-xl font-medium font-roboto mb-2">{user.first_name} {user.last_name}</li>

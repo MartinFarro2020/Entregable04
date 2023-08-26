@@ -26,6 +26,18 @@ function App() {
     })
   }
 
+  const updatemessaje = () =>{
+    Swal.fire({
+      title: 'successful update',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
+  }
+
 
   //!Hace un llamado a todos los usuarios
   const getAllUsers = () =>{
@@ -68,6 +80,7 @@ function App() {
         setIsShowModal(false)
         reset(EMPTY_FORM_VALUES)
         setIsUserToUpdate(null )
+        updatemessaje()
       })
       .catch((err) => console.log(err));
   
@@ -99,9 +112,9 @@ function App() {
           <button onClick={handleClickOpenModal} className="flex w-36 h-10 items-center gap-1 bg-[#555A88] p-2 mb-3 mr-2 text-[#FFFFFF] shadow-xl"><i className="bx bx-plus text-2xl" ></i>Crear Usuario</button> 
         </nav>
       </header>
-
-            <ModalForm isShowModal={isShowModal} createUser={createUser} isUserToUpdate={isUserToUpdate} updateUser={updateUser} setIsShowModal={setIsShowModal} setIsUserToUpdate={setIsUserToUpdate}/>
             <UsersList users={users} deleteUser={deleteUser} handleClickUpdateUser={handleClickUpdateUser} />
+            <ModalForm isShowModal={isShowModal} createUser={createUser} isUserToUpdate={isUserToUpdate} updateUser={updateUser} setIsShowModal={setIsShowModal} setIsUserToUpdate={setIsUserToUpdate}/>
+            
         </section>
       
         
