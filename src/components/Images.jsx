@@ -20,9 +20,9 @@ const Images = () => {
     return (
         <section>
             {
-                users?.map((user)=> <article>
+                users?.map((user)=> <article key={user.email}>
                     <div>
-                        <img src={user.picture.large} alt=""/>
+                        <img className="rounded-full border-4 border-slate-500 " src={user.picture.large} alt=""/>
                     </div>
                 </article>      )
             }
